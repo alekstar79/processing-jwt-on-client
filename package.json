@@ -1,0 +1,38 @@
+{
+  "name": "jwt",
+  "version": "1.0.0",
+  "description": "Token-Based Authentication",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node ./main.mjs"
+  },
+  "author": "Aleksey Tarasenko <alekstar79@yandex.ru>",
+  "homepage": "https://github.com/alekstar79/jwt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alekstar79/jwt.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lquixada/cross-fetch/issues"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.1"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "vite": "^5.0.8"
+  },
+  "keywords": [
+    "authentication",
+    "authorization",
+    "jwt"
+  ]
+}

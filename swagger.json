@@ -1,0 +1,1027 @@
+{
+  "swagger" : "2.0",
+  "info" : {},
+  "basePath" : "/api/v2",
+  "paths" : {
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/register" : {
+      "post" : {
+        "summary" : "register",
+        "description" : "Регистрирует нового пользователя",
+        "operationId" : "register",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RegisterRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/RegisterResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/getUserInfo" : {
+      "post" : {
+        "summary" : "getUserInfo",
+        "description" : "Получение информации пользователя",
+        "operationId" : "getUserInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/GetUserInfoRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/UserInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/getPublicKey" : {
+      "post" : {
+        "summary" : "getPublicKey",
+        "description" : "Получение публичного ключа для проверки JWT-токена",
+        "operationId" : "getPublicKey",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/GetPublicKeyRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/GetPublicKeyResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/login" : {
+      "post" : {
+        "summary" : "login",
+        "description" : "Авторизация пользователя",
+        "operationId" : "login",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/LoginRequest"
+          }
+        }, {
+          "name" : "X-Real-IP",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/LoginResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/resetPassword" : {
+      "post" : {
+        "summary" : "resetPassword",
+        "description" : "Сброс пароля пользователя",
+        "operationId" : "resetPassword",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ResetPasswordRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/EmptyResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/getRecaptchaSiteKey" : {
+      "post" : {
+        "summary" : "getRecaptchaSiteKey",
+        "description" : "Возвращает SITE KEY для использования Google ReCaptcha",
+        "operationId" : "getRecaptchaSiteKey",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/RecaptchaSiteKeyResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/updateUserInfo" : {
+      "post" : {
+        "summary" : "updateUserInfo",
+        "description" : "Изменение информации пользователя",
+        "operationId" : "updateUserInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/UpdateUserInfoRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/EmptyResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/getLegalEntityInfo" : {
+      "post" : {
+        "summary" : "getLegalEntityInfo",
+        "description" : "Получение информации по юридическому лицу",
+        "operationId" : "getLegalEntityInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/GetLegalEntityInfoRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/LegalEntityInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/getIndividualStatus" : {
+      "post" : {
+        "summary" : "getIndividualStatus",
+        "description" : "Получение информации о статусе физического лица",
+        "operationId" : "getIndividualStatus",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/GetIndividualStatusRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/LegalEntityInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/changeLogin" : {
+      "post" : {
+        "summary" : "changeLogin",
+        "description" : "Изменение адреса электронной почты или телефона пользователя",
+        "operationId" : "changeLogin",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ChangeLoginRequest"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/sendEmailConfirmationLink" : {
+      "post" : {
+        "summary" : "sendEmailConfirmationLink",
+        "description" : "Отправка ссылки для подтверждения e-mail пользователя",
+        "operationId" : "sendEmailConfirmationLink",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/SendEmailConfirmationLinkRequest"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/sendPasswordResetLink" : {
+      "post" : {
+        "summary" : "sendPasswordResetLink",
+        "description" : "Отправка ссылки для сброса пароля пользователя",
+        "operationId" : "sendPasswordResetLink",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/SendPasswordResetLinkRequest"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/confirmEmail" : {
+      "post" : {
+        "summary" : "confirmEmail",
+        "description" : "Подтверждение e-mail пользователя",
+        "operationId" : "confirmEmail",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ConfirmEmailRequest"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/getTelegramAuthLink" : {
+      "post" : {
+        "summary" : "getTelegramAuthLink",
+        "description" : "Получение ссылки для авторизации через Телеграм",
+        "operationId" : "getTelegramAuthLink",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/GetTelegramAuthLinkRequest"
+          }
+        }, {
+          "name" : "origin",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/OAuthLinkResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/getOAuthLink" : {
+      "post" : {
+        "summary" : "getOAuthLink",
+        "description" : "Получение ссылки для авторизации через соцсети",
+        "operationId" : "getOAuthLink",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/OAuthLinkRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/OAuthLinkResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/logout" : {
+      "post" : {
+        "summary" : "logout",
+        "description" : "Деавторизация пользователя",
+        "operationId" : "logout",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/LogoutRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/EmptyResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/regenerateTokens" : {
+      "post" : {
+        "summary" : "regenerateTokens",
+        "description" : "Получение нового JWT-токена доступа",
+        "operationId" : "regenerateTokens",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RegenerateTokensRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/LoginResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/sendConfirmCode" : {
+      "post" : {
+        "summary" : "sendConfirmCode",
+        "description" : "Отсылает код для потверждения телефона или адреса e-mail",
+        "operationId" : "sendConfirmCode",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/SendConfirmCodeRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/EmptyResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/oauthLogin" : {
+      "post" : {
+        "summary" : "oauthLogin",
+        "description" : "Авторизация пользователя через OAuth (соцсети)",
+        "operationId" : "oauthLogin",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/OAuthLoginRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/LoginResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/telegramLogin" : {
+      "post" : {
+        "summary" : "telegramLogin",
+        "description" : "Авторизация пользователя через Телеграм",
+        "operationId" : "telegramLogin",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/TelegramLoginRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/LoginResponse"
+            }
+          }
+        }
+      }
+    },
+    "/org.wso2.msf4j.swagger.ExtendedSwaggerReader$1@76bd60d5/confirmPhone" : {
+      "post" : {
+        "summary" : "confirmPhone",
+        "description" : "Подтверждение номера телефона пользователя",
+        "operationId" : "confirmPhone",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ConfirmPhoneRequest"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "RegisterResponse" : {
+      "type" : "object",
+      "properties" : {
+        "ok" : {
+          "type" : "boolean",
+          "description" : "Флаг успешности запроса"
+        },
+        "uid" : {
+          "type" : "string",
+          "description" : "Идентификатор нового пользователя"
+        }
+      },
+      "description" : "Ответ на запрос на регистрацию пользователя"
+    },
+    "RegisterRequest" : {
+      "type" : "object",
+      "required" : [ "email", "password", "phone", "userinfo" ],
+      "properties" : {
+        "email" : {
+          "type" : "string",
+          "description" : "Адрес e-mail (обязателен при отсутствии номера телефона)"
+        },
+        "emailConfirmCode" : {
+          "type" : "string",
+          "description" : "Код подтверждения адреса e-mail. Необязательный. Если пусто, адрес останется неподтвержденным"
+        },
+        "phone" : {
+          "type" : "string",
+          "description" : "Номер мобильного телефона (обязателен при отсутствии e-mail)"
+        },
+        "phoneConfirmCode" : {
+          "type" : "string",
+          "description" : "Код подтверждения телефона. Необязательный. Если пусто, телефон останется неподтвержденным"
+        },
+        "inn" : {
+          "type" : "string",
+          "description" : "ИНН для регистрации, как юридическое лицо"
+        },
+        "password" : {
+          "type" : "string",
+          "description" : "Пароль"
+        },
+        "userinfo" : {
+          "type" : "object",
+          "description" : "Информация о пользователе. Здесь можно хранить любые данные пользователя в виде JSON-объекта. Поля определяет программист, использующий сервис авторизации",
+          "additionalProperties" : {
+            "type" : "object"
+          }
+        },
+        "recapthcaToken" : {
+          "type" : "string",
+          "description" : "Токен Recapthca. Используется только когда включена проверка Recaptcha. Узнать включена ли проверка можно, используя запрос getRecaptchaSiteKey"
+        },
+        "roles" : {
+          "type" : "object",
+          "description" : "Роли пользователя (строка или массив строк)"
+        }
+      },
+      "description" : "Запрос регистрации нового пользователя"
+    },
+    "UserInfoResponse" : {
+      "type" : "object",
+      "properties" : {
+        "ok" : {
+          "type" : "boolean",
+          "description" : "Флаг успешности запроса"
+        },
+        "roles" : {
+          "type" : "array",
+          "description" : "Роли пользователя",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "E-mail пользователя"
+        },
+        "emailIsConfirmed" : {
+          "type" : "boolean",
+          "description" : "Флаг подтверждения адреса e-mail"
+        },
+        "phone" : {
+          "type" : "string",
+          "description" : "Телефон пользователя"
+        },
+        "phoneIsConfirmed" : {
+          "type" : "boolean",
+          "description" : "Флаг подтверждения телефона"
+        },
+        "inn" : {
+          "type" : "string",
+          "description" : "ИНН пользователя"
+        },
+        "is_online" : {
+          "type" : "boolean",
+          "description" : "Пользователь онлайн?"
+        },
+        "userinfo" : {
+          "type" : "object",
+          "description" : "Информация пользователя. Здесь возвращается то, что было указано при регистрации пользователя",
+          "additionalProperties" : {
+            "type" : "object"
+          }
+        }
+      },
+      "description" : "Ответ с информацией о пользователе"
+    },
+    "GetUserInfoRequest" : {
+      "type" : "object",
+      "required" : [ "accessToken" ],
+      "properties" : {
+        "accessToken" : {
+          "type" : "string",
+          "description" : "JWT-токен доступа"
+        }
+      },
+      "description" : "Запрос получения информации о пользователе"
+    },
+    "GetPublicKeyResponse" : {
+      "type" : "object",
+      "properties" : {
+        "kty" : {
+          "type" : "string",
+          "description" : "Тип ключа. Сейчас установлен ключ RSA"
+        },
+        "n" : {
+          "type" : "string",
+          "description" : "Параметр n для ключей RSA (модуль)"
+        },
+        "e" : {
+          "type" : "string",
+          "description" : "Параметр e для ключей RSA (открытая экспонента)"
+        }
+      },
+      "description" : "Ключ в формате JWK"
+    },
+    "GetPublicKeyRequest" : {
+      "type" : "object",
+      "description" : "Запрос получения публичного ключа для проверки JWT-токена"
+    },
+    "LoginResponse" : {
+      "type" : "object",
+      "properties" : {
+        "ok" : {
+          "type" : "boolean",
+          "description" : "Флаг успешности запроса"
+        },
+        "accessToken" : {
+          "type" : "string",
+          "description" : "JWT-токен доступа"
+        },
+        "refreshToken" : {
+          "type" : "string",
+          "description" : "Токен для обновления JWT-токена после окончания срока его действия"
+        }
+      },
+      "description" : "Ответ авторизации"
+    },
+    "LoginRequest" : {
+      "type" : "object",
+      "required" : [ "code", "credential", "password" ],
+      "properties" : {
+        "credential" : {
+          "type" : "string",
+          "description" : "Адрес e-mail или телефон"
+        },
+        "password" : {
+          "type" : "string",
+          "description" : "Пароль (необходим, если не указан code)"
+        },
+        "code" : {
+          "type" : "string",
+          "description" : "Код доступа (необходим, если не указан password)"
+        },
+        "registrationToken" : {
+          "type" : "string",
+          "description" : "Токен регистрации для активации пользователя, добавленного через приватный метод addUser"
+        },
+        "recapthcaToken" : {
+          "type" : "string",
+          "description" : "Токен Recapthca. Используется только когда включена проверка Recaptcha. Узнать включена ли проверка можно, используя запрос getRecaptchaSiteKey"
+        },
+        "remoteAddress" : {
+          "type" : "string"
+        }
+      },
+      "description" : "Запрос авторизации"
+    },
+    "EmptyResponse" : {
+      "type" : "object",
+      "properties" : {
+        "ok" : {
+          "type" : "boolean",
+          "description" : "Флаг успешности запроса"
+        }
+      },
+      "description" : "Пустой ответ"
+    },
+    "ResetPasswordRequest" : {
+      "type" : "object",
+      "required" : [ "code", "email", "password", "phone", "token" ],
+      "properties" : {
+        "phone" : {
+          "type" : "string",
+          "description" : "Номер мобильного телефона (обязателен при отсутствии e-mail)"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Адрес e-mail (обязателен при отсутствии номера телефона)"
+        },
+        "code" : {
+          "type" : "string",
+          "description" : "Код подтверждения, введеный пользователем"
+        },
+        "token" : {
+          "type" : "string",
+          "description" : "Токен сбороса пароля из ссылки"
+        },
+        "password" : {
+          "type" : "string",
+          "description" : "Новый пароль"
+        }
+      },
+      "description" : "Запрос сброса пароля пользователя"
+    },
+    "RecaptchaSiteKeyResponse" : {
+      "type" : "object",
+      "properties" : {
+        "ok" : {
+          "type" : "boolean",
+          "description" : "Флаг успешности запроса"
+        },
+        "key" : {
+          "type" : "string",
+          "description" : "SITE KEY для использования с Google ReCaptcha"
+        },
+        "use" : {
+          "type" : "boolean"
+        }
+      },
+      "description" : "Ответ на запрос getRecaptchaSiteKey"
+    },
+    "UpdateUserInfoRequest" : {
+      "type" : "object",
+      "required" : [ "accessToken", "userinfo" ],
+      "properties" : {
+        "accessToken" : {
+          "type" : "string",
+          "description" : "JWT-токен доступа"
+        },
+        "userinfo" : {
+          "type" : "object",
+          "description" : "Информация о пользователе. Здесь можно хранить любые данные пользователя в виде JSON-объекта. Поля определяет программист, использующий сервис авторизации",
+          "additionalProperties" : {
+            "type" : "object"
+          }
+        }
+      },
+      "description" : "Запрос изменения информации пользователя"
+    },
+    "LegalEntityInfoResponse" : {
+      "type" : "object",
+      "properties" : {
+        "inn" : {
+          "type" : "string",
+          "description" : "ИНН"
+        },
+        "type" : {
+          "type" : "string",
+          "description" : "Тип ИНН (возможные значения: invalid, legalEntity, individualEntrepreneur, selfEmployed"
+        },
+        "kpp" : {
+          "type" : "string",
+          "description" : "КПП"
+        },
+        "ogrn" : {
+          "type" : "string",
+          "description" : "ОГРН"
+        },
+        "short_name" : {
+          "type" : "string",
+          "description" : "Краткое наименование юридического лица"
+        },
+        "full_name" : {
+          "type" : "string",
+          "description" : "Полное наименование юридического лица или ФИО индивидуального предпринимателя"
+        },
+        "status" : {
+          "type" : "string",
+          "description" : "Статус"
+        },
+        "reg_date" : {
+          "type" : "string",
+          "description" : "Дата регистрации"
+        },
+        "sex" : {
+          "type" : "string",
+          "description" : "Пол (m - male, f - female) для ИП"
+        },
+        "citizenship" : {
+          "type" : "string",
+          "description" : "Гражданство для ИП"
+        }
+      },
+      "description" : "Ответ на запрос информации о юридическом лице"
+    },
+    "GetLegalEntityInfoRequest" : {
+      "type" : "object",
+      "required" : [ "inn" ],
+      "properties" : {
+        "inn" : {
+          "type" : "string",
+          "description" : "ИНН юридического лица"
+        }
+      },
+      "description" : "Запрос на получение информации о юридическом лице"
+    },
+    "GetIndividualStatusRequest" : {
+      "type" : "object",
+      "required" : [ "inn" ],
+      "properties" : {
+        "inn" : {
+          "type" : "string",
+          "description" : "ИНН юридического лица"
+        }
+      },
+      "description" : "Запрос на получение информации о статусе физического лица"
+    },
+    "ChangeLoginRequest" : {
+      "type" : "object",
+      "required" : [ "accessToken", "email", "phone" ],
+      "properties" : {
+        "accessToken" : {
+          "type" : "string",
+          "description" : "JWT-токен доступа"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Новый адрес электронной почты"
+        },
+        "emailConfirmCode" : {
+          "type" : "string",
+          "description" : "Код подтверждения адреса e-mail"
+        },
+        "phone" : {
+          "type" : "string",
+          "description" : "Новый номер телефона"
+        },
+        "phoneConfirmCode" : {
+          "type" : "string",
+          "description" : "Код подтверждения телефона"
+        }
+      },
+      "description" : "Запрос получения информации о пользователе"
+    },
+    "SendEmailConfirmationLinkRequest" : {
+      "type" : "object",
+      "required" : [ "email" ],
+      "properties" : {
+        "email" : {
+          "type" : "string",
+          "description" : "Адрес e-mail"
+        }
+      }
+    },
+    "SendPasswordResetLinkRequest" : {
+      "type" : "object",
+      "required" : [ "email" ],
+      "properties" : {
+        "email" : {
+          "type" : "string",
+          "description" : "Адрес e-mail"
+        }
+      }
+    },
+    "ConfirmEmailRequest" : {
+      "type" : "object",
+      "required" : [ "code", "email", "token" ],
+      "properties" : {
+        "token" : {
+          "type" : "string",
+          "description" : "Токен для подтверждения (обязателен, если не указан code)"
+        },
+        "code" : {
+          "type" : "string",
+          "description" : "Код для подтверждения (обязателен, если не указан token)"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Подтверждаемый e-mail (обязателен, если указан code)"
+        }
+      },
+      "description" : "Запрос на подтверждение e-mail"
+    },
+    "OAuthLinkResponse" : {
+      "type" : "object",
+      "properties" : {
+        "url" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetTelegramAuthLinkRequest" : {
+      "type" : "object",
+      "required" : [ "redirect_uri" ],
+      "properties" : {
+        "redirect_uri" : {
+          "type" : "string",
+          "description" : "URI для обработки ответа от Телеграм. Будет добавлен как параметр в ссылку для авторизации"
+        }
+      }
+    },
+    "OAuthLinkRequest" : {
+      "type" : "object",
+      "required" : [ "redirect_uri", "type" ],
+      "properties" : {
+        "type" : {
+          "type" : "string",
+          "description" : "Тип соцсети. Может принимать значения: vk, fb, g+, ya, apple"
+        },
+        "redirect_uri" : {
+          "type" : "string",
+          "description" : "URI для обработки ответа от соцсети. Будет добавлен как параметр в ссылку для авторизации"
+        }
+      }
+    },
+    "LogoutRequest" : {
+      "type" : "object",
+      "required" : [ "refreshToken" ],
+      "properties" : {
+        "refreshToken" : {
+          "type" : "string",
+          "description" : "Токен обновления"
+        }
+      },
+      "description" : "Запрос деавторизации"
+    },
+    "RegenerateTokensRequest" : {
+      "type" : "object",
+      "required" : [ "refreshToken" ],
+      "properties" : {
+        "refreshToken" : {
+          "type" : "string",
+          "description" : "Токен для обновления JWT-токена доступа после окончания срока его действия"
+        }
+      },
+      "description" : "Запрос обновления JWT-токена доступа"
+    },
+    "SendConfirmCodeRequest" : {
+      "type" : "object",
+      "required" : [ "email", "phone", "use_call" ],
+      "properties" : {
+        "email" : {
+          "type" : "string",
+          "description" : "Адрес e-mail (обязателен при отсутствии номера телефона)"
+        },
+        "phone" : {
+          "type" : "string",
+          "description" : "Номер мобильного телефона (обязателен при отсутствии e-mail)"
+        },
+        "use_call" : {
+          "type" : "boolean",
+          "description" : "Использовать прозвон для отправки кода на телефон"
+        }
+      }
+    },
+    "OAuthLoginRequest" : {
+      "type" : "object",
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "code" : {
+          "type" : "string"
+        },
+        "redirect_uri" : {
+          "type" : "string"
+        }
+      }
+    },
+    "TelegramLoginRequest" : {
+      "type" : "object",
+      "required" : [ "tgAuthResult" ],
+      "properties" : {
+        "tgAuthResult" : {
+          "type" : "string",
+          "description" : "Результат авторизации, который вернул Телеграм"
+        }
+      }
+    },
+    "ConfirmPhoneRequest" : {
+      "type" : "object",
+      "required" : [ "code", "phone" ],
+      "properties" : {
+        "code" : {
+          "type" : "string",
+          "description" : "Код для подтверждения"
+        },
+        "phone" : {
+          "type" : "string",
+          "description" : "Подтверждаемый номер телефона"
+        }
+      }
+    }
+  }
+}
