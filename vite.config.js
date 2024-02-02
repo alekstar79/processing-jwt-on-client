@@ -9,9 +9,11 @@ import { config } from 'dotenv'
 config()
 
 /**
-* @type {import('vite').UserConfig}
+* @function
+* @param {import('vite').ConfigEnv} config
+* @returns {import('vite').UserConfig}
 */
-export default defineConfig(({ command, mode }) => {
+const configFn = ({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
@@ -47,4 +49,6 @@ export default defineConfig(({ command, mode }) => {
       drop: command === 'serve' ? [] : ['console'],
     }
   }
-})
+}
+
+export default defineConfig(configFn)
