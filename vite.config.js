@@ -1,6 +1,9 @@
 // noinspection JSCheckFunctionSignatures
 
-/** @see {@link [vitejs.dev/config](https://vitejs.dev/config)} */
+/**
+* @see [Generating Documentation JSDoc]{@link https://habr.com/ru/articles/572968}
+* @see [vitejs.dev/config]{@link https://vitejs.dev/config}
+*/
 
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'

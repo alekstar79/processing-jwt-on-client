@@ -11,14 +11,14 @@
     "start": "node ./main.mjs"
   },
   "author": "Aleksey Tarasenko <alekstar79@yandex.ru>",
-  "homepage": "https://github.com/alekstar79/jwt",
+  "homepage": "https://github.com/alekstar79/processing-jwt-on-client",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alekstar79/jwt.git"
+    "url": "https://github.com/alekstar79/processing-jwt-on-client.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alekstar79/jwt/issues"
+    "url": "https://github.com/alekstar79/processing-jwt-on-client/issues"
   },
   "dependencies": {
     "axios": "^1.6.7",
